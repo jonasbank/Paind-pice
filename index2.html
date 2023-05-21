@@ -2,7 +2,32 @@
 <html>
 <body bgcolor=Green>
 <center>
-<h1>Test<h1>
+<h1>Managment<h1>
+  <form>
+  <label for="username">Nom d'utilisateur:</label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="password">Mot de passe:</label>
+  <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="Se connecter">
+</form>
+
+<script>
+  // Remplacez ceci par votre propre fonction de vérification des informations d'identification
+  function checkCredentials(username, password) {
+    return username === 'nom_utilisateur_valide' && password === 'mot_de_passe_valide';
+  }
+
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var username = document.querySelector('#username').value;
+    var password = document.querySelector('#password').value;
+    if (checkCredentials(username, password)) {
+      alert('Connexion réussie!');
+    } else {
+      alert('Nom d\'utilisateur ou mot de passe incorrect');
+    }
+  });
+</script>
 </center>
 </body>
 </html>
