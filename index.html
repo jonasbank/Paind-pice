@@ -3,16 +3,17 @@
   
   <head>
     <title>Page de mot de passe</title>
-    <script>
-function checkPassword() {
+     <script>
+   async function checkPassword() {
   var password = document.getElementById("password").value;
-  if (password === "0000000000") {
+  var hashedPassword = await hashPassword(password);
+  if (hashedPassword === "9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0") {
     window.location.href = "index2.html";
   } else {
     alert("Accés Refuser");
   }
 }
-    </script>
+     </script>
   </head>
 <body bgcolor=red>
 <center>
