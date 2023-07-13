@@ -4,6 +4,8 @@
   <head>
     <title>Page de mot de passe</title>
      <script>
+       <script>
+
 async function checkPassword() {
   const password = document.getElementById("password").value;
   const hash = await sha256(password);
@@ -25,6 +27,14 @@ async function sha256(message) {
 }
 
      </script>
+    <script>
+function checkEnter(event) {
+    if (event.keyCode === 13) {
+        checkPassword();
+    }
+}
+</script>
+    
   </head>
 <body bgcolor=red>
 <center>
@@ -32,7 +42,7 @@ async function sha256(message) {
     <h2>Entrez le mot de passe</h2>
     <form>
       <label for="password">Mot de passe:</label><br>
-      <input type="password" id="password" name="password" onkeydown="checkEnter"><br><br>
+      <input type="password" id="password" name="password" onkeydown="checkEnter(event)"><br><br>
       <input type="button" value=" Vérifé " onclick="checkPassword()">
     </form> 
 
