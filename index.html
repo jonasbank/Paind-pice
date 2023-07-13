@@ -27,13 +27,6 @@ async function sha256(message) {
 }
 
      </script>
-    <script>
-function checkEnter(event) {
-    if (event.keyCode === 13) {
-        checkPassword();
-    }
-}
-</script>
     
   </head>
 <body bgcolor=red>
@@ -42,7 +35,7 @@ function checkEnter(event) {
     <h2>Entrez le mot de passe</h2>
     <form>
       <label for="password">Mot de passe:</label><br>
-      <input type="password" id="password" name="password" onkeydown="checkEnter(event)"><br><br>
+      <input type="password" id="password" name="password" onclick="checkPassword()><br><br>
       <input type="button" value=" Vérifé " onclick="checkPassword()">
     </form> 
 
