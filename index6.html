@@ -1,1 +1,26 @@
+ <title> DATE DE NAISSANCE</title>
+     <script>
 
+async function checkPassword() {
+  const password = document.getElementById("password").value;
+  const hash = await sha256(password);
+  if (hash === "22b0430591437d8928c51c17bfaed2d26a95737d4fdc1460e0e108239c08a3c0") {
+    window.location.href = "index2.html";
+  } else {
+    alert("Accés Refuser");
+  }
+}
+
+
+ <title> CODE SECRER</title>
+     <script>
+
+async function checkPassword() {
+  const password = document.getElementById("password").value;
+  const hash = await sha256(password);
+  if (hash === "98dc0608a3ae43fc8759c0490d3ab637657636c545be850d646a260156f5fc7e") {
+    window.location.href = "index2.html";
+  } else {
+    alert("Accés Refuser");
+  }
+}
