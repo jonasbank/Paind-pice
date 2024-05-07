@@ -18,7 +18,7 @@
 async function checkPassword() {
   const password = document.getElementById("password").value;
   const hash = await sha256(password);
-  if (hash === "9f34673bb61c9f4079175427a7c70cdddc5f368efbd1be3d4f5fc916805c2e71") {
+  if (hash === "bf74e4a280affafbdf6692bc6a9f3d66b03094fbfb4a91589bc7fd6b32664fdb") {
     window.location.href = "index2.html";
   } else {
     alert("Accés Refuser");
